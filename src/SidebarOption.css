@@ -1,0 +1,25 @@
+.sidebarOption {
+  
+  color: gray;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  /* background-color: yellow; */
+
+}
+
+.sidebar hr{
+  border: 1px solid rgb(174, 174, 174);
+  width: 90%;
+  margin: 10px auto;
+}
+
+.sidebarOption:hover{
+  color: rgb(39, 141, 13);
+  transition: 200ms ease-in;
+}
+
+.sidebarOption_icon {
+  padding: 0 10px;
+}
