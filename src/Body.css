@@ -1,8 +1,28 @@
 .body{
-  border: 1px solid rgb(3, 68, 16);
+  border: 1px solid rgb(0, 0, 0);
   flex: 0.8;
   background: linear-gradient(rgb(23, 19, 137), rgb(33, 33, 33), rgb(116, 116, 116));
   height: 100vh;
   color: white;
   padding: 30px;
+}
+
+.body_info{
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+
+}
+
+.body_infoText{
+  flex: 1;
+}
+
+.body_infoText h2{
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.body_infoText p {
+  font-size: 14px;
 }

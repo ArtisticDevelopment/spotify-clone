@@ -9,6 +9,9 @@
 
 }
 
+.sidebarOption p {
+  margin-left: 15px;
+}
 
 
 .sidebarOption:hover{
