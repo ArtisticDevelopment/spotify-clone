@@ -4,8 +4,11 @@ import SidebarOption from "./SidebarOption";
 import LibraryMusicIcon from "@mui/icons-material/LibraryMusic";
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
+import { useGlobalState } from "./ContextLayer";
 
 function Sidebar() {
+  const [{ playlists }, dispatch] = useGlobalState();
+
   return (
     <div className="sidebar">
       <img
@@ -21,10 +24,10 @@ function Sidebar() {
       <strong className="sidebar_title">PLAYLISTS</strong>
       <hr />
 
-      <SidebarOption title="Today's Top 20" />
-      <SidebarOption title="Suggested For You" />
-      <SidebarOption title="Rock" />
-      <SidebarOption title="" />
+      {/* callback function is =>() and not =>{} because it's returning *content* and not *functionality* */}
+      {playlists?.items?.map((playlist) => (
+        <SidebarOption title={playlist.name} />
+      ))}
     </div>
   );
 }

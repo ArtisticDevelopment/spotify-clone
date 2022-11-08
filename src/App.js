@@ -13,9 +13,13 @@ function App() {
 
   //onload
   useEffect(() => {
+    //in spotify.js
     const hash = getTokenFromURL();
+
+    //hides the token from public url
     window.location.hash = "";
 
+    //local variable for storing online-token
     const _token = hash.access_token;
 
     if (_token) {
@@ -30,6 +34,12 @@ function App() {
         dispatch({
           type: "SET_USER",
           user: spotifyUser,
+        });
+      });
+      spotifyApi.getUserPlaylists().then((playlists) => {
+        dispatch({
+          type: "SET_PLAYLISTS",
+          playlists: playlists,
         });
       });
     }

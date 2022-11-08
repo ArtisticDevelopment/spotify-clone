@@ -1,3 +1,8 @@
 *{
   margin: 0;
 }
+
+/* literally removes scrollbar from window so it looks cleaner */
+body::-webkit-scrollbar {
+  display: none;
+}
