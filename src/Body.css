@@ -5,17 +5,60 @@
   height: 100vh;
   color: white;
   padding: 30px;
+  overflow-y: overlay;
+  
+}
+
+.body::-webkit-scrollbar{
+  display: none;
+}
+
+.body hr{
+  border: 1px solid rgb(64, 64, 64);
+  width: 90%;
+  margin: 10px auto;
 }
 
 .body_info{
   display: flex;
   align-items: flex-end;
   padding: 10px;
+}
 
+.body_info img {
+  height: 20vw;
+  margin: 0 20px;
+  box-shadow: 0 4px 60px(rgba(0,0,0, 0.5));
 }
 
 .body_infoText{
   flex: 1;
+}
+
+.body_icons{
+  display: flex;
+  align-items: center;
+  
+}
+
+.body_icons .MuiSvgIcon-root {
+  margin-right: 20px;
+}
+
+.body_shuffle{
+  font-size: 80px !important;
+  margin: 20px 10px;
+  margin-left: 40px;
+}
+
+body_songs{
+  margin: 20px -30px;
+}
+
+.body_shuffle:hover{
+  transition: 130ms transform ease-in background-color 0.5;
+  transform: scale(1.08);
+  
 }
 
 .body_infoText h2{
